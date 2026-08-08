@@ -133,6 +133,11 @@ On first run the FAISS index is built into `artifacts/` and reused thereafter. T
 | **Correction** | none | web-search fallback | regenerate + re-retrieve |
 | **Loops** | linear | one branch | bounded feedback loops |
 
+
+## Architecture
+
+![Self-RAG graph](graph.png)
+
 ---
 
 ## Tech stack
