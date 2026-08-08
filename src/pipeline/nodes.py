@@ -103,12 +103,12 @@ def decide_to_generate(state):
     if not documents:
         if retries >= MAX_RETRIES:
             logger.info("---NO DOCS, MAX RETRIES: giving up---")
-            return generate
+            return 'generate'
         
         logger.info("---NO RELEVANT DOCS: re-retrieve (transform query)---")
-        return 'transform query'
+        return 'transform_query'
     else:
-        return generate
+        return 'generate'
     
 def grade_generation(state):
     logger.info("---GRADE GENERATION---")
@@ -151,5 +151,5 @@ def transform_query(state):
     logger.info("---TRANSFORM QUERY---")
     question = state["question"]
     better_question = transform_chain.invoke({"question": question})
-    
+
     return {"question": better_question}

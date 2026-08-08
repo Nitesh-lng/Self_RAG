@@ -1,7 +1,7 @@
 from pathlib import Path
 from src.config.settings import PDF_PATH, INDEX_PATH, CHUNK_SIZE, CHUNK_OVERLAP
-from src.components.loader import PDFDocumentLoader   
-from src.components.chunker import TextSplitter       
+from src.components.loader import PDFDocumentLoader
+from src.components.chunker import TextSplitter
 from src.components.vector_store import VectorStoreBuilder
 from src.pipeline.graph import app
 from src.utils.logger import get_logger
